@@ -40,6 +40,8 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         input_path = sys.argv[1]
     else:
-        input_path = input("Enter path to the .txt file to scan for emails: ").strip()
+        input_path = input(
+            "Enter path to the .txt file to scan for emails: "
+        ).strip()
 
     extract_emails(input_path)

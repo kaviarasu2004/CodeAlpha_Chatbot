@@ -8,9 +8,17 @@ import random
 RESPONSES = {
     "hello": ["Hi!", "Hello there!", "Hey! How can I help?"],
     "hi": ["Hi!", "Hello!"],
-    "how are you": ["I'm fine, thanks! How about you?", "Doing great, thanks for asking!"],
-    "what is your name": ["I'm a simple chatbot built for the CodeAlpha internship."],
-    "what can you do": ["I can chat with you about basic things. Try saying hello, or ask how I am!"],
+    "how are you": [
+        "I'm fine, thanks! How about you?",
+        "Doing great, thanks for asking!"
+    ],
+    "what is your name": [
+        "I'm a simple chatbot built for the CodeAlpha internship."
+    ],
+    "what can you do": [
+        "I can chat with you about basic things. "
+        "Try saying hello, or ask how I am!"
+    ],
     "thank you": ["You're welcome!", "Anytime!"],
     "thanks": ["No problem!", "You're welcome!"],
     "bye": ["Goodbye!", "See you later!", "Bye! Take care."],
