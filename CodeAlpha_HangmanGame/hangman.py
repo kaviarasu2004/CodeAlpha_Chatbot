@@ -80,7 +80,9 @@ def choose_word():
 
 
 def display_progress(word, guessed_letters):
-    return " ".join(letter if letter in guessed_letters else "_" for letter in word)
+    return " ".join(
+        letter if letter in guessed_letters else "_" for letter in word
+    )
 
 
 def play_hangman():
@@ -89,12 +91,19 @@ def play_hangman():
     wrong_guesses = 0
 
     print("Welcome to Hangman!")
-    print("Guess the word, one letter at a time. You have", MAX_WRONG_GUESSES, "wrong guesses allowed.\n")
+    print(
+        "Guess the word, one letter at a time. You have",
+        MAX_WRONG_GUESSES,
+        "wrong guesses allowed.\n"
+    )
 
     while wrong_guesses < MAX_WRONG_GUESSES:
         print(HANGMAN_STAGES[wrong_guesses])
         print("Word: ", display_progress(word, guessed_letters))
-        print("Guessed letters:", ", ".join(sorted(guessed_letters)) if guessed_letters else "None")
+        print(
+            "Guessed letters:",
+            ", ".join(sorted(guessed_letters)) if guessed_letters else "None"
+        )
 
         guess = input("Guess a letter: ").lower().strip()
 
@@ -116,7 +125,10 @@ def play_hangman():
                 return
         else:
             wrong_guesses += 1
-            print(f"Wrong guess. {MAX_WRONG_GUESSES - wrong_guesses} guesses left.\n")
+            print(
+                f"Wrong guess. "
+                f"{MAX_WRONG_GUESSES - wrong_guesses} guesses left.\n"
+            )
 
     print(HANGMAN_STAGES[wrong_guesses])
     print(f"Game over! The word was: {word}")

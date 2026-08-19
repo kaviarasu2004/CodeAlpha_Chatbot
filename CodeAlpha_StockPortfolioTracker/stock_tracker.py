@@ -21,7 +21,10 @@ STOCK_PRICES = {
 def get_portfolio_from_user():
     portfolio = {}
     print("Available stocks:", ", ".join(STOCK_PRICES.keys()))
-    print("Enter stock name and quantity. Type 'done' as stock name to finish.\n")
+    print(
+        "Enter stock name and quantity. "
+        "Type 'done' as stock name to finish.\n"
+    )
 
     while True:
         stock = input("Stock symbol: ").upper().strip()
@@ -66,7 +69,9 @@ def save_summary(breakdown, total, filename="portfolio_summary.csv"):
             writer.writerow([stock, quantity, price, value])
         writer.writerow([])
         writer.writerow(["Total Investment", "", "", total])
-        writer.writerow(["Generated on", datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
+        writer.writerow(
+            ["Generated on", datetime.now().strftime("%Y-%m-%d %H:%M:%S")]
+        )
     print(f"\nSummary saved to {filename}")
 
 
